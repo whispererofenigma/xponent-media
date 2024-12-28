@@ -5,7 +5,7 @@ function Admin() {
 
     useEffect(() => {
         const fetchBlogs = async () => {
-            const response = await fetch('/api/blogs');
+            const response = await fetch('http://localhost:5000/api/blogs');
             const data = await response.json();
             setBlogs(data);
         };
@@ -14,7 +14,7 @@ function Admin() {
     }, []);
 
     return (
-        <div className="p-4">
+        <div className="p-4 bg-black/20">
             <h1 className="text-2xl font-bold mb-4">Admin Dashboard</h1>
             <table className="table-auto w-full">
                 <thead>

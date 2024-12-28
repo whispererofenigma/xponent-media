@@ -1,6 +1,9 @@
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Admin from "../pages/admin";
+import Admin from "../pages/Admin";
+import CreateBlogPage from "../pages/CreateBlog";
+import CreateAdmin from "../pages/CreateAdmin";
+import AdminLogin from "../pages/AdminLogin";
 
 const routes = [
   {
@@ -14,8 +17,18 @@ const routes = [
   },
 
   {
-    path: "/admin",
-    element: <Admin />,
+    path: "/admin-blog",
+    element: <CreateBlogPage />,
+  },
+  
+  {
+    path: "/admin-new",
+    element: <CreateAdmin />,
+  },
+  
+  {
+    path: "/admin-login",
+    element: <AdminLogin />,
   },
      
 ];
