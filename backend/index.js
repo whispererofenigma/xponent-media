@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const blogRoutes = require('./routes/blogRoutes');
 const adminRoutes = require('./routes/adminRoutes');
+const adminMiddleware = require('./middleware/adminMiddleware')
 
 const cors = require('cors');
 
@@ -24,7 +25,8 @@ const corsOptions = {
 app.use(cors(corsOptions)); // Enable CORS
 
 app.use('/api/blogs', blogRoutes);
-app.use('/api/admin/', adminRoutes);
+app.use('/api/admin', adminRoutes);
+
 
 // MongoDB connection
 mongoose

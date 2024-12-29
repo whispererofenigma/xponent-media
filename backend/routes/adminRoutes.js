@@ -10,6 +10,8 @@ router.post('/login', adminLogin);
 router.post('/create', createAdmin);
 
 // Protected routes
-router.get('/profile', adminAuth, getAdminProfile);
+router.get('/auth', adminAuth, (req, res) => {
+    res.status(200).json({ message: 'Token is valid' });
+});
 
 module.exports = router;
